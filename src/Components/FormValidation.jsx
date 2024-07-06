@@ -34,7 +34,7 @@ const FormValidation = () => {
     <>
       <section className="abcsec section">
         <div className="main-container">
-          <div className="modal">
+          <div className="modals">
             <div className="modal-container">
               <div className="modal-left-container">
                 <h1 className="title">Welcome!</h1>
