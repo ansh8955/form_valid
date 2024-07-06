@@ -1,6 +1,7 @@
 import React, { act } from 'react';
 import {useFormik} from 'formik';
 import {signUpSchema} from './schemas';
+import './FormValidation.css';
 
 
 const initialValues = {
@@ -32,20 +33,18 @@ onSubmit:(values,action)=>{
 console.log(errors)
   return (
    <>
-<div>
+<section className= 'abcsec section'>
 <div className='container'>
 
     <div className='modal'>
 
         <div className='modal-container'>
 <div className='modal-left'>
-    <h1 className='title'>Welcome</h1>
-
-    <p></p>
+    <h1 className='title'>Welcome!</h1>
 
     <form onSubmit={handleSubmit}>
-<div>
-<label htmlFor='name'>
+<div className='input-block'>
+<label htmlFor='name' className='input-label'>
     Name
 </label>
 <input type="name"
@@ -57,12 +56,12 @@ value={values.name}
 onChange ={handleChange}
 onBlur={handleBlur}
 ></input>
-{errors.name && touched.name ? (<p>{errors.name}</p>) : null}
+{errors.name && touched.name ? (<p className='form-error'>{errors.name}</p>) : null}
 
 </div>
 
-<div>
-<label htmlFor='email'>
+<div className='input-block'>
+<label htmlFor='email'  className='input-label'>
 
     Email
 </label>
@@ -76,11 +75,11 @@ onChange ={handleChange}
 onBlur={handleBlur}
 ></input>
 
-{errors.email && touched.email ? (<p>{errors.email}</p>) : null}
+{errors.email && touched.email ? (<p className='form-error'>{errors.email}</p>) : null}
 
 </div>
-<div>
-<label htmlFor='password'>
+<div className='input-block' >
+<label htmlFor='password'  className='input-label'>
 Password
 </label>
 <input type="password"
@@ -92,34 +91,42 @@ value={values.password}
 onChange ={handleChange}
 onBlur={handleBlur}
 ></input>
-{errors.password && touched.password ? (<p>{errors.password}</p>) : null}
+{errors.password && touched.password ? (<p className='form-error'>{errors.password}</p>) : null}
 
 </div>
-<div>
-<label htmlFor='confirm_password'>
+<div className='input-block'>
+<label htmlFor='confirm_password'  className='input-label'>
 Confirm_Password
 </label>
 <input type="password"
 autoComplete='off'
 name='confirm_password'
-id='password'
+id='confirm_password'
 placeholder='Confirm password'
 value={values.confirm_password}
 onChange ={handleChange}
 onBlur={handleBlur}
 ></input>
 
-{errors.confirm_password && touched.confirm_password ? (<p>{errors.confirm_password}</p>) : null}
+{errors.confirm_password && touched.confirm_password ? (<p className='form-error'>{errors.confirm_password}</p>) : null}
+</div>
+<div className='modal-buttons'>
+
+<button className= 'input-button' type='submit' disabled >Sign Up</button>
+
 </div>
 
-<button type='submit'>Submit</button>
     </form>
 </div>
+<div className='modal-right'>
 
+<img src="https://images.pexels.com/photos/7974/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600"/>
+
+</div>
         </div>
     </div>
 </div>
-</div>
+</section>
 
 
 

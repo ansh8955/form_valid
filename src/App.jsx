@@ -1,4 +1,3 @@
-import './App.css'
 import FormValidation from './Components/FormValidation'
 
 function App() {
