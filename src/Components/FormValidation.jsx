@@ -31,6 +31,13 @@ onSubmit:(values,action)=>{
 });
 
 console.log(errors)
+
+
+function handlebutton() {
+    return (
+      values.name && values.email && values.password && values.confirm_password
+    );
+}
   return (
    <>
 <section className= 'abcsec section'>
@@ -112,7 +119,7 @@ onBlur={handleBlur}
 </div>
 <div className='modal-buttons'>
 
-<button className= 'input-button' type='submit' disabled >Sign Up</button>
+<button className= 'input-button' type='submit' disabled = {!handlebutton()}>Sign Up</button>
 
 </div>
 
