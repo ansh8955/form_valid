@@ -33,10 +33,10 @@ const FormValidation = () => {
   return (
     <>
       <section className="abcsec section">
-        <div className="container">
+        <div className="main-container">
           <div className="modal">
             <div className="modal-container">
-              <div className="modal-left">
+              <div className="modal-left-container">
                 <h1 className="title">Welcome!</h1>
 
                 <form onSubmit={handleSubmit}>
@@ -126,7 +126,7 @@ const FormValidation = () => {
                   </div>
                 </form>
               </div>
-              <div className="modal-right">
+              <div className="modal-right-container">
                 <img src="https://images.pexels.com/photos/7974/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600" />
               </div>
             </div>
